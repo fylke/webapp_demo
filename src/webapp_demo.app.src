@@ -1,0 +1,17 @@
+{application, webapp_demo,
+    [{description, "An OTP application"},
+     {vsn, "0.1.0"},
+     {registered, []},
+     {mod, {webapp_demo_app, []}},
+     {applications,
+         [kernel,
+          stdlib,
+          crypto, %% Used by cowboy during websocket handshake
+          cowboy,
+          compiler,
+          lager,
+          syntax_tools]},
+     {env,[]},
+     {modules, []},
+     {licenses, ["Apache 2.0"]},
+     {links, []}]}.
